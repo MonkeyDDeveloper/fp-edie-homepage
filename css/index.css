@@ -89,34 +89,34 @@ header a {
     width: 100%;
     border-radius: 18px;
 }
-.card {
+.first-content .card {
     grid-area: card;
     height: auto;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
 }
-.card-header {
+.first-content .card-header {
     width: 65%;
     margin-bottom: 1.5rem;
 }
-.card-header span {
+.first-content .card-header span {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 3rem;
     color: #333333;
 }
-.card-body {
+.first-content .card-body {
     width: 65%;
     margin-bottom: 1.5rem;
 }
-.card-body span {
+.first-content .card-body span {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 1.12rem;
     color: #333333;
 }
-.card-footer {
+.first-content .card-footer {
     /* height: 15%; */
     width: 65%;
     margin-bottom: 1.5rem;
@@ -124,14 +124,14 @@ header a {
     flex-flow: column;
     justify-content: space-between;
 }
-.card-footer span {
+.first-content .card-footer span {
     margin-bottom: .5rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: .88rem;
     color: #828282;
 }
-.card-footer form {
+.first-content .card-footer form {
     width: 100%;
     height: 3.5rem;
     border-radius: 0.75rem;
@@ -186,14 +186,13 @@ header a {
     margin: 0 auto;
     padding: 1rem 1rem;
     border-radius: 24px;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    align-items: flex-start;
 }
 .second-content .card:hover {
     box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
     cursor: pointer;
+}
+.second-content .card button {
+    width: max-content;
 }
 .second-content .card:hover button {
     color: white;
@@ -292,49 +291,18 @@ header a {
     color: #333333;
 }
 .third-content .smarthome {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-end;
-    height: 100%;
     grid-area: smarthome;
-}
-.third-content .smarthome .card{
-    align-items: flex-start;
+    align-self: end;
 }
 .third-content .onboard {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    height: 100%;
     grid-area: onboard;
 }
-.third-content .onboard .card{
-    align-items: flex-end;
-}
 .third-content .booking {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-end;
-    height: 100%;
     grid-area: booking;
-}
-.third-content .booking .card{
-    align-items: flex-start;
+    align-self: end;
 }
 .third-content .juice-product {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: flex-start;
-    height: 100%;
     grid-area: juice-product;
-}
-.third-content .juice-product .card{
-    align-items: flex-end;
-}
-.third-content .card {
-    height: max-content;
-    display: flex;
-    flex-flow: column wrap;
 }
 .third-content .card p,
 .third-content .card h4 {
@@ -458,6 +426,11 @@ header a {
 }
 .little-card .decorator-img {
     width: 24%;
+    height: inherit;
+    /* border: thin solid black; */
+}
+.little-card .decorator-img img{
+    width: 100%;
     border-radius: 1.12rem;
 }
 .little-card .decorator-information {
@@ -628,35 +601,6 @@ header a {
     }
 }
 @media screen and (max-width: 1000px) {
-    /* .sixth-content .contact form{
-        height: 50%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-    }
-    .sixth-content .contact form input,
-    .sixth-content .contact form button {
-        height: 90%;
-        width: 90%;
-        margin: 0 auto;
-    }
-    .third-content {
-        grid-template-rows: auto repeat(2, 90vh);
-    }
-    .third-content .third-content-header {
-        width: 60%;
-    }
-    .fourth-content {
-        grid-template-rows: repeat(2, auto);
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "meet-team"
-            "team-imgs"
-        ;
-    }
-    .fourth-content .team-imgs > * {
-        text-align: center;
-    } */
     .second-content {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, auto);
@@ -672,48 +616,6 @@ header a {
     }
 }
 @media screen and (max-width: 950px) {
-    /* .sixth-content .contact form{
-        height: 50%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-    }
-    .sixth-content .contact form input,
-    .sixth-content .contact form button {
-        height: 90%;
-        width: 90%;
-        margin: 0 auto;
-    }
-    .third-content {
-        grid-template-rows: auto repeat(2, 90vh);
-    }
-    .third-content .third-content-header {
-        width: 60%;
-    }
-    .fourth-content {
-        grid-template-rows: repeat(2, auto);
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "meet-team"
-            "team-imgs"
-        ;
-    }
-    .fourth-content .team-imgs > * {
-        text-align: center;
-    } */
-    /* .second-content {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-template-areas: 
-            "header ."
-            "design frontend"
-            "backend backend"    
-        ;
-    }
-    .second-content .backend {
-        width: 50%;
-        margin: auto;
-    } */
     .third-content {
         grid-template-rows: auto repeat(2, 80vh);
     }
@@ -830,157 +732,6 @@ header a {
     }
 }
 @media screen and (max-width: 840px) {
-    /* .sixth-content .contact form{
-        height: 50%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-    }
-    .sixth-content .contact form input,
-    .sixth-content .contact form button {
-        height: 90%;
-        width: 90%;
-        margin: 0 auto;
-    }
-    .third-content {
-        grid-template-rows: auto repeat(2, 90vh);
-    }
-    .third-content .third-content-header {
-        width: 60%;
-    }
-    .fourth-content {
-        grid-template-rows: repeat(2, auto);
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "meet-team"
-            "team-imgs"
-        ;
-    }
-    .fourth-content .team-imgs > * {
-        text-align: center;
-    } */
-    /* .second-content {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-template-areas: 
-            "header ."
-            "design frontend"
-            "backend backend"    
-        ;
-    }
-    .second-content .backend {
-        width: 50%;
-        margin: auto;
-    } */
-    /* .third-content {
-        grid-template-rows: auto repeat(2, 80vh);
-    }
-    .first-content .principal-text h1{
-        width: 100%;
-    }
-    .first-content .card-header, 
-    .first-content .card-body, 
-    .first-content .card-footer {
-        width: 90%;
-    }
-    header input {
-        opacity: 0;
-        margin: 0;
-        z-index: 99999;
-        display: block;
-        position: absolute;
-        top: 6%;
-        right: 7%;
-        width: 5%;
-        height: 3rem;
-        cursor: pointer;
-        transform: translateY(-50%);
-    }
-    header .burger {
-        display: block;
-        position: absolute;
-        z-index: 9999;
-        top: 6%;
-        right: 7%;
-        width: 5%;
-        height: .5rem;
-        border-radius: 1rem;
-        background-color: #333;
-    }
-    header .burger::before {
-        content: "";
-        position: absolute;
-        z-index: 9999;
-        bottom: 1rem;
-        width: 100%;
-        height: .5rem;
-        border-radius: 1rem;
-        background-color: #333;
-        transition: transform 300ms ease-in, background-color 300ms ease-in;
-    }
-    header .burger::after {
-        content: "";
-        position: absolute;
-        z-index: 9999;
-        top: 1rem;
-        width: 100%;
-        height: .5rem;
-        border-radius: 1rem;
-        background-color: #333;
-        transition: transform 300ms ease-in, background-color 300ms ease-in;
-    }
-    .first-content header nav {
-        position: fixed;
-        z-index: 999;
-        top: 0;
-        right: 0;
-        width: 25vw;
-        height: 100vh;
-        display: flex;
-        flex-flow: column;
-        justify-content: flex-start;
-        align-items: center;
-        transform: translateX(100%);
-        pointer-events: none;
-        background-color: #333;
-        border-radius: .5rem;
-        transition: transform 300ms ease-in;
-    }
-    .first-content nav a {
-        color: white;
-        margin-top: 2rem;
-        transition: font-size .2s linear;
-    }
-    .first-content nav a:hover {
-        cursor: pointer;
-        font-size: 1.6rem;
-        text-decoration: underline;
-    }
-    .first-content header input[type="checkbox"]:checked {
-        background-color: transparent;
-        width: 4%;
-        top: 4%;
-        right: 1%;
-    }
-    .first-content header input[type="checkbox"]:checked + .burger{
-        background-color: transparent;
-        position: fixed;
-        width: 4%;
-        top: 4%;
-        right: 1%;
-    }
-    .first-content header input[type="checkbox"]:checked + .burger::before{
-        transform: translateY(1rem) rotate(45deg);
-        background-color: white;
-    }
-    .first-content header input[type="checkbox"]:checked + .burger::after{
-        transform: translateY(-1rem) rotate(-45deg);
-        background-color: white;
-    }
-    .first-content header input[type="checkbox"]:checked ~ nav{
-        transform: translateX(0%);
-        pointer-events: all;
-    } */
     .first-content {
         grid-template-areas: 
             "header header header header"
@@ -1010,184 +761,6 @@ header a {
     }
 }
 @media screen and (max-width: 785px) {
-    /* .sixth-content .contact form{
-        height: 50%;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
-    }
-    .sixth-content .contact form input,
-    .sixth-content .contact form button {
-        height: 90%;
-        width: 90%;
-        margin: 0 auto;
-    }
-    .third-content {
-        grid-template-rows: auto repeat(2, 90vh);
-    }
-    .third-content .third-content-header {
-        width: 60%;
-    }
-    .fourth-content {
-        grid-template-rows: repeat(2, auto);
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "meet-team"
-            "team-imgs"
-        ;
-    }
-    .fourth-content .team-imgs > * {
-        text-align: center;
-    } */
-    /* .second-content {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-template-areas: 
-            "header ."
-            "design frontend"
-            "backend backend"    
-        ;
-    }
-    .second-content .backend {
-        width: 50%;
-        margin: auto;
-    } */
-    /* .third-content {
-        grid-template-rows: auto repeat(2, 80vh);
-    }
-    .first-content .principal-text h1{
-        width: 100%;
-    }
-    .first-content .card-header, 
-    .first-content .card-body, 
-    .first-content .card-footer {
-        width: 90%;
-    }
-    header input {
-        opacity: 0;
-        margin: 0;
-        z-index: 99999;
-        display: block;
-        position: absolute;
-        top: 6%;
-        right: 7%;
-        width: 5%;
-        height: 3rem;
-        cursor: pointer;
-        transform: translateY(-50%);
-    }
-    header .burger {
-        display: block;
-        position: absolute;
-        z-index: 9999;
-        top: 6%;
-        right: 7%;
-        width: 5%;
-        height: .5rem;
-        border-radius: 1rem;
-        background-color: #333;
-    }
-    header .burger::before {
-        content: "";
-        position: absolute;
-        z-index: 9999;
-        bottom: 1rem;
-        width: 100%;
-        height: .5rem;
-        border-radius: 1rem;
-        background-color: #333;
-        transition: transform 300ms ease-in, background-color 300ms ease-in;
-    }
-    header .burger::after {
-        content: "";
-        position: absolute;
-        z-index: 9999;
-        top: 1rem;
-        width: 100%;
-        height: .5rem;
-        border-radius: 1rem;
-        background-color: #333;
-        transition: transform 300ms ease-in, background-color 300ms ease-in;
-    }
-    .first-content header nav {
-        position: fixed;
-        z-index: 999;
-        top: 0;
-        right: 0;
-        width: 25vw;
-        height: 100vh;
-        display: flex;
-        flex-flow: column;
-        justify-content: flex-start;
-        align-items: center;
-        transform: translateX(100%);
-        pointer-events: none;
-        background-color: #333;
-        border-radius: .5rem;
-        transition: transform 300ms ease-in;
-    }
-    .first-content nav a {
-        color: white;
-        margin-top: 2rem;
-        transition: font-size .2s linear;
-    }
-    .first-content nav a:hover {
-        cursor: pointer;
-        font-size: 1.6rem;
-        text-decoration: underline;
-    }
-    .first-content header input[type="checkbox"]:checked {
-        background-color: transparent;
-        width: 4%;
-        top: 4%;
-        right: 1%;
-    }
-    .first-content header input[type="checkbox"]:checked + .burger{
-        background-color: transparent;
-        position: fixed;
-        width: 4%;
-        top: 4%;
-        right: 1%;
-    }
-    .first-content header input[type="checkbox"]:checked + .burger::before{
-        transform: translateY(1rem) rotate(45deg);
-        background-color: white;
-    }
-    .first-content header input[type="checkbox"]:checked + .burger::after{
-        transform: translateY(-1rem) rotate(-45deg);
-        background-color: white;
-    }
-    .first-content header input[type="checkbox"]:checked ~ nav{
-        transform: translateX(0%);
-        pointer-events: all;
-    } */
-    /* .first-content {
-        grid-template-areas: 
-            "header header header header"
-            ". principal-text principal-text principal-text"
-            "team-img team-img team-img team-img"
-            ". card card ."
-        ;
-    }
-    .first-content .principal-text h1 {
-        width: 90%;
-    }
-    .second-content {
-        grid-template-columns: 1fr;
-        grid-template-rows: 3;
-        grid-template-areas: 
-            "header"
-            "design"
-            "frontend"
-            "backend"
-        ;
-    }
-    .second-content .backend{
-        width: auto;
-    }
-    .fifth-content .phrase {
-        width: 100%;
-    } */
     body {
         row-gap: 10vh;
     }
@@ -1233,7 +806,6 @@ header a {
         font-size: 1.5rem;
     }
     .second-content .card {
-        display: block;
         margin-bottom: 4rem;
         width: 100%;
         height: 50vh;
@@ -1278,7 +850,6 @@ header a {
     .third-content .card-img .card {
         margin: 0 auto 2rem;
         width: 100%;
-        display: block;
     }
     .third-content .card h4,
     .third-content .see-more {
@@ -1426,6 +997,13 @@ header a {
         ;
     }
 }
+@media screen and (max-width: 385px) {
+    .fifth-content .little-card .decorator-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 @media screen and (min-width: 1400px) {
     .sixth-content {
         min-height: 50vh;
@@ -1444,14 +1022,5 @@ header a {
         height: 75vh;
         width: 90%;
         margin: 0 auto;
-        /* display: grid;
-        grid-template-rows: %; */
-        /* height: 120%; */
-    }
-    .third-content .card-img .card{
-        /* height: 120%; */
-        /* justify-content: flex-end; */
-        display: block;
-        /* min-height: max-content; */
     }
 }

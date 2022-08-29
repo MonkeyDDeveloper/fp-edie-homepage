@@ -1,2 +1,2 @@
 # edie home page
-you can check the result here: https://fp-edie-homepage.herokuapp.com/
+you can check the result here: https://maroon-seagull-robe.cyclic.app/
